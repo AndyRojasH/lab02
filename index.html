@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+  <title>Lab02Rojas</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> 
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="box">
+        <img src="backgroundspace.jpg" height="10px" alt="">
+    </div>
+	<h1 class="title" id="tittle1">RESOLVIENDO MATEMÁTICA</h1>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#tittle2">Hablanos de ti</a>
+        <a class="nav-link active" href="#tittle3">Suma y Multiplicación</a>
+        <a class="nav-link active" href="#tittle4">Mayor y menor</a>
+        <a class="nav-link active" href="#tittle5">Promedio</a>
+        <a class="nav-link active" href="#tittle6">Número mayor</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="">
+	<h2 id="tittle2">HABLANOS DE TI!!</h2>
+        <div class="block">
+           <form>
+           	    <label><p id="l1" for="nombre">Cómo te llamas?</p></label>
+        	    <input type="text" name="nombre" id="nombre" >
+        	     <img src="hand.jpg" height="100px" alt="">
+           	    <label><p id="l1" for="apellido">Cuál es tu email?</p></label>
+        	    <input type="text" name="apellido" id="apellido"></input>
+           </form>
+        </div>
+        <div class="container">
+        	<button id="buttn0" type="button" onclick="getValueInput()">Enviar</button>
+        </div>
+        <div class="block">
+        	<p id="valueInput"></p>
+        </div>
+        <div class="block">
+        	<p id="valueInput2"></p>
+        </div>
+        <script>
+        	const getValueInput = () =>{
+        		let inputValue = document.getElementById("nombre").value;
+        		document.getElementById("valueInput").innerHTML="<h7>Bienvenid@  </h7>" + inputValue + "";
+        		let inputValue2 = document.getElementById("apellido").value;
+        		document.getElementById("valueInput2").innerHTML="<h7>Email:  </h7>" + inputValue2 + "";
+        	}
+        </script>
+</div>
+    <div class="container">
+      <div class="text">
+        <h3 id="tittle3">SUMA Y MULTIPLICACIÓN</h3>
+      </div>
+      <div class="image">
+        <img src="plus.jpg" height="100px" alt="">
+      </div>
+    </div>
+        <p id="l1">Ingrese un número en cada espacio:</p>
+        <form>
+        	<input type="number" name="input1" id="input1"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input2" id="input2"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input3" id="input3"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input4" id="input4"></input>
+        </form>
+        </br>
+        <div class="container">
+            <button type="button" onclick="getValueInput2()">Enviar</button>
+        </div>
+        <div class="block">
+        	<p id="firstresult"></p>
+        </div>
+        <div class="block">
+        	<p id="secondresult"></p>
+        </div>
+        <script>
+        	const getValueInput2 = () =>{
+        		let inputValue3 = document.getElementById("input1").value;
+        		let inputValue4 = document.getElementById("input2").value;
+        		let inputValue5 = document.getElementById("input3").value;
+        		let inputValue6 = document.getElementById("input4").value;
+
+        		let z = parseInt(inputValue3) + parseInt(inputValue4)
+        		let y = parseInt(inputValue5) * parseInt(inputValue6)
+        		
+        		document.getElementById("firstresult").innerHTML="<h7>SUMA:  </h7>" + z + "";	
+        		document.getElementById("secondresult").innerHTML="<h7>MULTIPLICACIÓN:  </h7>" + y + "";
+        	}
+        </script>
+</div>
+<div class="container">
+      <div class="text">
+    <h4 id="tittle4">MAYOR Y MENOR</h4>
+    </div>
+      <div class="image">
+        <img src="mult.jpg" height="100px" alt="">
+      </div>
+    </div>
+        <p id="l1">Ingrese un número en cada espacio:</p>
+        <form>
+        	<input type="number" name="input5" id="input5"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input6" id="input6"></input>
+        </form>
+        </br>
+        <div class="container">
+            <button type="button" onclick="getValueInput3()">Enviar</button>
+        </div>
+        <div class="block">
+        	<p id="thirdresult"></p>
+        </div>
+        <div class="block">
+        	<p id="forthresult"></p>
+        </div>
+        <script>
+        	const getValueInput3 = () =>{
+        		let inputValue7 = document.getElementById("input5").value;
+        		let inputValue8 = document.getElementById("input6").value;
+
+        		if (parseInt(inputValue7)>parseInt(inputValue8)){
+        			n = parseInt(inputValue7) + parseInt(inputValue8)
+        			b = parseInt(inputValue7) - parseInt(inputValue8)
+        		}
+        		else if (parseInt(inputValue7)<parseInt(inputValue8)){
+        			n = parseInt(inputValue7) * parseInt(inputValue8)
+        			b = parseInt(inputValue7) / parseInt(inputValue8)
+        		}
+        		else if (parseInt(inputValue7)==parseInt(inputValue8)){
+        			n = "Ambos números son iguales"
+        			b = "Ambos números son iguales"
+        		}
+        		
+        		document.getElementById("thirdresult").innerHTML="<h7>RESULTADO 1:  </h7>" + n + "";
+        		document.getElementById("forthresult").innerHTML="<h7>RESULTADO 2:  </h7>" + b + "";			
+        	}
+        </script>
+</div>
+<div class="container">
+      <div class="text">
+    <h5 id="tittle5">PROMEDIO</h5>
+    </div>
+      <div class="image">
+        <img src="prom.jpg" height="80px" alt="">
+      </div>
+    </div>
+        <p id="l1">Ingrese una nota en cada espacio:</p>
+        <form>
+        	<input type="number" name="input7" id="input7"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input8" id="input8"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input9" id="input9"></input>
+        </form>
+        </br>
+        <div class="container">
+            <button type="button" onclick="getValueInput4()">Enviar</button>
+        </div>
+        <div class="block">
+        	<p id="fifthresult"></p>
+        </div>
+        <script>
+        	const getValueInput4 = () =>{
+        		let inputValue9 = document.getElementById("input7").value;
+        		let inputValue10 = document.getElementById("input8").value;
+        		let inputValue11 = document.getElementById("input9").value;
+
+        		function prom3nots(x,y,z){
+        			return (x+y+z)/3
+        		}
+
+        		if ((prom3nots(parseInt(inputValue9), parseInt(inputValue10), parseInt(inputValue11)))>= 4){
+        			o="REGULAR"
+        		}
+        		else{
+        			o="REPROBADO"
+        		}
+        		
+        		document.getElementById("fifthresult").innerHTML="<h7>RESULTADO:  </h7>" + o + "";			
+        	}
+        </script>
+</div>
+<div class="container">
+      <div class="text">
+    <h6 id="tittle6">NÚMERO MAYOR</h6>
+    </div>
+      <div class="image">
+        <img src="majorminur.jpg" height="80px" alt="">
+      </div>
+    </div>
+        <p id="l1">Ingrese un número en cada espacio:</p>
+        <form>
+        	<input type="number" name="input10" id="input10"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input11" id="input11"></input>
+        </form>
+        </br>
+        <form>
+        	<input type="number" name="input12" id="input12"></input>
+        </form>
+        </br>
+        <div class="container">
+        	<button type="button" onclick="getValueInput5()">Enviar</button>
+        </div>
+        <div class="block">
+        	<p id="sixthresult"></p>
+        </div>
+        <script>
+        	const getValueInput5 = () =>{
+        		let inputValue12 = document.getElementById("input10").value;
+        		let inputValue13 = document.getElementById("input11").value;
+        		let inputValue14 = document.getElementById("input12").value;
+
+        		let g = Math.max(parseInt(inputValue12), parseInt(inputValue13), parseInt(inputValue14))
+        		
+        		document.getElementById("sixthresult").innerHTML="<h7>MAYOR NÚMERO:  </h7>" + g + "";			
+        	}
+        </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
